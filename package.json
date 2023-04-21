@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "esbuild main.ts --platform=browser --bundle --sourcemap --tree-shaking=true --outfile=./dist/main.js",
+    "build": "esbuild main.ts --platform=browser --bundle --sourcemap --tree-shaking=true --outfile=./public/main.js",
     "start": "concurrently npm:start:*",
     "start:demo": " sleep 2 && vite --host",
     "start:metafile": "sleep 1 && esbuild main.ts --platform=browser --bundle --metafile=./public/meta.json --outfile=/dev/null"
