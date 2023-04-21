@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Cookie Keeper Demo </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+			html {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				background-color: #0084ff;
+				color: transparent;
+			}
+
+			.layout {
+				display: grid;
+				grid-template-columns: 0.5rem 1fr 0.5rem;
+				grid-template-rows: 0.5rem 1fr 0.5rem 1fr 0.5rem; 
+			}
+
+			.layout-item-1 {
+				 grid-area: 2 / 2 / 3 / 3;
+			}
+
+			.layout-item-2 {
+				grid-area:  4 / 2 / 5 / 3;
+			}
+
+			.layout-item-background {
+				grid-area: 1 / 1 / 6 / 4;
+			}
+
+			@media screen and (min-width: 800px) {
+				.layout {
+					grid-template-columns: 1fr minmax(15rem, 37rem) 1fr minmax(15rem, 37rem) 1fr;
+					grid-template-rows: minmax(3rem, auto) minmax(3rem, 53rem) minmax(3rem, auto);
+				}
+
+				.layout-item-1 {
+					grid-area: 2 / 2 / 3 / 3;
+				}
+
+				.layout-item-2 {
+					grid-area:  2 / 4 / 3 / 5;
+				}
+
+				.layout-item-background {
+					grid-area: 1 / 1 / 4 / 6;
+				}
+			}
+		</style>
+		
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+		<div class="layout" style="height: 100%">
+			<cookies-panel class="layout-item-1">
+				<cookies-breadcrumbs><span>Main</span><span>Medium</span><span>subpage</span></cookies-breadcrumbs>
+				<cookies-h1> cookies-ds demo </cookies-h1>
+
+				<cookies-p>
+					This is a demo for the cookies-ds lib. You can also check the <cookies-a href="http://perdu.com">Github repository,</cookies-a>
+					the <cookies-a href="http://perdu.com">npm package,</cookies-a> or the <cookies-a href="http://perdu-not-visited.com">documentation.</cookies-a>
+				</cookies-p>
+
+				<cookies-p> Help component: </cookies-p>
+				<cookies-info visited title="Tooltip is also supported"></cookies-info>
+				<cookies-p> The datepicker component: </cookies-p>
+				<cookies-datetime-picker> </cookies-datetime-picker>
+				<cookies-p> Smart padlock component: </cookies-p>
+				<cookies-smart-padlock lockable unlockable release-timestamp="12345678999" style="width:10rem; height: 10rem;"> </cookies-smart-padlock>
+			</cookies-panel>
+
+			<cookies-panel class="layout-item-2">
+				<cookies-h1> En guise d'exemple </cookies-h1>
+				<cookies-p>
+					Rapporter du revenu est la raison qui décide de tout dans cette petite
+					ville qui vous semblait si jolie. L’étranger qui arrive, séduit par la
+					beauté des fraîches et profondes vallées qui l’entourent, s’imagine d’abord
+					que ses habitants sont sensibles au beau ; ils ne parlent que trop souvent
+					de la beauté de leur pays : on ne peut pas nier qu’ils n’en fassent grand
+					cas ; mais c’est parce qu’elle attire quelques étrangers dont l’argent
+					enrichit les aubergistes, ce qui, par le mécanisme de l’octroi,
+					rapporte du revenu à la ville.
+				</cookies-p>
+
+				<cookies-p>
+					Le lecteur voudra bien nous permettre de donner très peu de faits
+					clairs et précis sur cette époque de la vie de Julien. Ce n’est
+					pas qu’ils nous manquent, bien au contraire ; mais peut-être ce
+					qu’il vit au séminaire est-il trop noir pour coloris modéré que
+					l’on a cherché à conserver dans ces feuilles. Les contemporains
+					qui souffrent de certaines choses ne peuvent s’en souvenir qu’avec
+					une horreur qui paralyse tout autre plaisir, même celui de lire un conte.
+				</cookies-p>
+
+				<cookies-p>
+					L’humeur hautaine de Julien fut choquée de l’insolence des laquais.
+					Il se mit à parcourir les dortoirs de l’antique abbaye, secouant toutes
+					les portes qu’il rencontrait.
+				</cookies-p>
+			</cookies-panel>
+
+			<cookies-background class="layout-item-background"></cookies-background>
+		</div>
+		<cookies-snackbar><cookies-snackbar>
+	</body>
+</html>
