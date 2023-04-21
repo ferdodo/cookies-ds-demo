@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "esbuild main.ts --platform=browser --bundle --sourcemap --tree-shaking=true --outfile=./dist/main.js",
+    "start": "concurrently npm:start:*",
+    "start:demo": " sleep 2 && vite --host",
+    "start:metafile": "sleep 1 && esbuild main.ts --platform=browser --bundle --metafile=./public/meta.json --outfile=/dev/null"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cookies-ds": "^1.0.0",
+    "esbuild": "^0.17.4",
+    "typescript": "^4.9.4",
+    "vite": "^4.1.1"
+  }
+}
