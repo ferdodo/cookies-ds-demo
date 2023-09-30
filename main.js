@@ -1,4 +1,25 @@
 (() => {
+  var __async = (__this, __arguments, generator) => {
+    return new Promise((resolve, reject) => {
+      var fulfilled = (value) => {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      };
+      var rejected = (value) => {
+        try {
+          step(generator.throw(value));
+        } catch (e) {
+          reject(e);
+        }
+      };
+      var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+      step((generator = generator.apply(__this, __arguments)).next());
+    });
+  };
+
   // node_modules/cookies-ds/dist/components/padlock/template.js
   var template_default = '<style>\n	:host {\n		display: block;\n	}\n\n	#lock {\n		height: 100%;\n		min-height: 5rem;\n		display: grid;\n		grid-template-columns: 1fr;\n		grid-template-rows: 1fr;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n	}\n\n	#padlock-body {\n		grid-area: 1 / 1 / 2 / 2;\n		background-size: 100% 100%;\n	}\n\n	#shackle {\n		grid-area: 1 / 1 / 2 / 2;\n		background-size: 100% 100%;\n		position: relative;\n		transition: top 0.3s cubic-bezier(.19,1,.22,1);\n		z-index: -1;\n	}\n\n	#shackle-click-zone {\n		grid-area: 1 / 1 / 2 / 2;\n		display: grid;\n		grid-template-columns: 2.9fr 1fr 1fr 3.5fr 1fr 1fr 2.9fr;\n		grid-template-rows: 0.4fr 1.3fr 1fr 4.6fr 9.3fr;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		position: relative;\n		transition: top 0.3s cubic-bezier(.19,1,.22,1);\n		z-index: 1;\n	}\n\n	#shackle-part-1 {\n		grid-area: 3 / 2 / 5 / 4;\n	}\n\n	#shackle-part-2 {\n		grid-area: 2 / 3 / 4 / 6;\n	}\n\n	#shackle-part-3 {\n		grid-area: 3 / 5 / 5 / 7;\n	} \n</style>\n\n<div id="lock">\n	<div id="padlock-body"></div>\n	<div id="shackle"></div>\n\n	<div id="shackle-click-zone">\n		<div id="shackle-part-1" title="verrouiller"></div>\n		<div id="shackle-part-2" title="verrouiller"></div>\n		<div id="shackle-part-3" title="verrouiller"></div>\n	</div>\n</div>\n';
 
@@ -3050,7 +3071,7 @@
   }
 
   // node_modules/cookies-ds/dist/components/panel/template.js
-  var template_default7 = '<style>\n	:host {\n		display: block;\n	}\n\n	#panel-container {\n		display: grid;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		transition: grid-template-columns .5s cubic-bezier(.12,1.03,.11,.99), grid-template-rows .5s cubic-bezier(.12,1.03,.11,.99);\n		height: 100%;\n	}\n\n	#panel {\n		backdrop-filter: blur(0.3rem);\n		border-radius: 0.3rem;\n		padding: 1.7rem;\n		grid-area: 2 / 2 / 3 / 3;\n		background-color: #ffffff00;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);\n		color: black;\n		overflow: auto;\n	}\n\n	#panel-content {\n		visibility: collapse;\n		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);\n		overflow: hidden;\n	}\n\n	* {\n		scrollbar-width: auto;\n		scrollbar-color: #ffffff90 #ffffff00;\n	}\n\n	*::-webkit-scrollbar {\n		width: 8px;\n	}\n\n	*::-webkit-scrollbar-track {\n		background: #ffffff00;\n	}\n\n	*::-webkit-scrollbar-thumb {\n		background-color: #ffffff90;\n		border-radius: 10px;\n		border: 3px solid #ffffff00;\n	}\n</style>\n\n<div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">\n	<div id="panel">\n		<div id="panel-content" style="opacity: 0;">\n			<slot></slot>\n		</div>\n	</div>\n</div>\n';
+  var template_default7 = '<style>\n	:host {\n		display: block;\n	}\n\n	#panel-container {\n		display: grid;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		transition: grid-template-columns .5s cubic-bezier(.12,1.03,.11,.99), grid-template-rows .5s cubic-bezier(.12,1.03,.11,.99);\n		height: 100%;\n	}\n\n	#panel {\n		border-radius: 0.3rem;\n		padding: 1.7rem;\n		grid-area: 2 / 2 / 3 / 3;\n		background-color: #ffffff00;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);\n		color: black;\n		overflow: auto;\n		position: relative;\n	}\n\n	#panel-content {\n		visibility: collapse;\n		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);\n		overflow: hidden;\n		z-index: 1;\n		position: relative;\n	}\n\n	#panel-loading-container {\n		grid-area: 2 / 2 / 3 / 3;\n		overflow: hidden;\n		backdrop-filter: blur(0.3rem);\n	}\n\n	#panel-loading {\n		border-radius: 0.3rem;\n		width: 75%;\n		height: 100%;\n		background-color: #ffffff55;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n\n		transition-duration: 1s;\n		transition-timing-function: cubic-bezier(.17,.84,.44,1);\n		transition-delay: 0s;\n		transition-property: width, background-color;\n\n		color: black;\n		overflow: auto;\n\n		position: relative;\n	}\n\n	* {\n		scrollbar-width: auto;\n		scrollbar-color: #ffffff90 #ffffff00;\n	}\n\n	*::-webkit-scrollbar {\n		width: 8px;\n	}\n\n	*::-webkit-scrollbar-track {\n		background: #ffffff00;\n	}\n\n	*::-webkit-scrollbar-thumb {\n		background-color: #ffffff90;\n		border-radius: 10px;\n		border: 3px solid #ffffff00;\n	}\n</style>\n\n<div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">\n	<div id="panel-loading-container">\n		<div id="panel-loading"></div>\n	</div>\n\n	<div id="panel">\n		<div id="panel-content" style="opacity: 0;">\n			<slot></slot>\n		</div>\n	</div>\n</div>\n';
 
   // node_modules/cookies-ds/dist/utils/app-ready.js
   var __awaiter5 = function(thisArg, _arguments, P2, generator) {
@@ -3138,6 +3159,16 @@
   var templateNode7 = document.createElement("template");
   templateNode7.innerHTML = template_default7;
   var Panel = class extends HTMLElement {
+    constructor() {
+      super(...arguments);
+      this.contentTimeoutElapsed = false;
+      this.contentLoaded = false;
+      this.connected = false;
+      this.loading = "100";
+    }
+    static get observedAttributes() {
+      return ["loading"];
+    }
     connectedCallback() {
       return __awaiter6(this, void 0, void 0, function* () {
         this.attachShadow({ mode: "open" });
@@ -3145,22 +3176,61 @@
         const release = yield acquireAnimationLock();
         const shadowRoot = getShadowRoot(this);
         shadowRoot.appendChild(templateNode7.content.cloneNode(true));
-        setTimeout(function() {
+        const loading = this.getAttribute("loading");
+        if (loading !== null && isLoadingValid(loading)) {
+          this.loading = loading;
+        }
+        setTimeout(() => {
           const panelContainer = getElement(shadowRoot, "#panel-container");
           panelContainer.style.gridTemplateColumns = "1rem 1fr 1rem";
           panelContainer.style.gridTemplateRows = "1rem 1fr 1rem";
           const panel = getElement(shadowRoot, "#panel");
-          panel.style.backgroundColor = "#ffffff80";
+          panel.style.backgroundColor = "#ffffff40";
+          this.render();
         }, 10);
-        setTimeout(function() {
-          const panelContent = getElement(shadowRoot, "#panel-content");
-          panelContent.style.visibility = "visible";
-          panelContent.style.opacity = "1";
+        setTimeout(() => {
+          this.contentTimeoutElapsed = true;
+          this.render();
         }, 400);
         setTimeout(release, 600);
+        this.connected = true;
+        this.render();
       });
     }
+    render() {
+      const shadowRoot = getShadowRoot(this);
+      const panelContent = getElement(shadowRoot, "#panel-content");
+      const panelLoading = getElement(shadowRoot, "#panel-loading");
+      const panel = getElement(shadowRoot, "#panel");
+      if (this.contentTimeoutElapsed && isLoaded(this.loading)) {
+        panelContent.style.visibility = "visible";
+        panelContent.style.opacity = "1";
+        panel.style.overflow = "auto";
+      } else {
+        panelContent.style.visibility = "collapse";
+        panelContent.style.opacity = "0";
+        panel.style.overflow = "hidden";
+      }
+      panelLoading.style.width = `${this.loading}%`;
+    }
+    attributeChangedCallback() {
+      if (this.shadowRoot && this.connected) {
+        const loading = this.getAttribute("loading");
+        if (loading !== null && isLoadingValid(loading)) {
+          this.loading = loading;
+        }
+        this.render();
+      }
+    }
   };
+  function isLoadingValid(loading) {
+    const loadingAsNumber = Number(loading);
+    const rounded = Math.floor(loadingAsNumber);
+    return rounded == loadingAsNumber && Number.isInteger(rounded) && Number.isFinite(rounded) && rounded <= 100 && rounded >= 0;
+  }
+  function isLoaded(loading) {
+    return loading === null || loading === "100";
+  }
 
   // node_modules/cookies-ds/dist/components/p/template.js
   var template_default8 = "<style>\n	:host {\n		display: block;\n	}\n\n	p {\n		font-family: ds-notes-sans;\n		font-size: 1rem;\n		color: black;\n	}\n\n	@media screen and (min-width: 800px) {\n		p {\n			font-size: 1.4rem;\n		}\n	}\n</style>\n\n<p><slot></slot></p>\n";
@@ -4343,5 +4413,26 @@
 
   // main.ts
   setFavicon();
+  applyLoading().catch(console.error);
+  function applyLoading() {
+    return __async(this, null, function* () {
+      yield new Promise((r) => setTimeout(r, 3500));
+      const panel = getPanel2();
+      panel.setAttribute("loading", "0");
+      yield new Promise((r) => setTimeout(r, 200));
+      panel.setAttribute("loading", "20");
+      yield new Promise((r) => setTimeout(r, 500));
+      panel.setAttribute("loading", "50");
+      yield new Promise((r) => setTimeout(r, 1e3));
+      panel.setAttribute("loading", "100");
+    });
+  }
+  function getPanel2() {
+    const panel = document.getElementById("panel2");
+    if (panel === null) {
+      throw new Error("Panel not found !");
+    }
+    return panel;
+  }
 })();
 //# sourceMappingURL=main.js.map
