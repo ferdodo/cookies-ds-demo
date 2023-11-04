@@ -23,7 +23,7 @@
   // node_modules/cookies-ds/dist/components/padlock/template.js
   var template_default = '<style>\n	:host {\n		display: block;\n	}\n\n	#lock {\n		height: 100%;\n		min-height: 5rem;\n		display: grid;\n		grid-template-columns: 1fr;\n		grid-template-rows: 1fr;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n	}\n\n	#padlock-body {\n		grid-area: 1 / 1 / 2 / 2;\n		background-size: 100% 100%;\n	}\n\n	#shackle {\n		grid-area: 1 / 1 / 2 / 2;\n		background-size: 100% 100%;\n		position: relative;\n		transition: top 0.3s cubic-bezier(.19,1,.22,1);\n		z-index: -1;\n	}\n\n	#shackle-click-zone {\n		grid-area: 1 / 1 / 2 / 2;\n		display: grid;\n		grid-template-columns: 2.9fr 1fr 1fr 3.5fr 1fr 1fr 2.9fr;\n		grid-template-rows: 0.4fr 1.3fr 1fr 4.6fr 9.3fr;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		position: relative;\n		transition: top 0.3s cubic-bezier(.19,1,.22,1);\n		z-index: 1;\n	}\n\n	#shackle-part-1 {\n		grid-area: 3 / 2 / 5 / 4;\n	}\n\n	#shackle-part-2 {\n		grid-area: 2 / 3 / 4 / 6;\n	}\n\n	#shackle-part-3 {\n		grid-area: 3 / 5 / 5 / 7;\n	} \n</style>\n\n<div id="lock">\n	<div id="padlock-body"></div>\n	<div id="shackle"></div>\n\n	<div id="shackle-click-zone">\n		<div id="shackle-part-1" title="verrouiller"></div>\n		<div id="shackle-part-2" title="verrouiller"></div>\n		<div id="shackle-part-3" title="verrouiller"></div>\n	</div>\n</div>\n';
 
-  // node_modules/cookies-ds/node_modules/tslib/tslib.es6.js
+  // node_modules/tslib/tslib.es6.js
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
       d2.__proto__ = b2;
@@ -252,12 +252,12 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isFunction.js
+  // node_modules/rxjs/dist/esm5/internal/util/isFunction.js
   function isFunction(value) {
     return typeof value === "function";
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/createErrorClass.js
+  // node_modules/rxjs/dist/esm5/internal/util/createErrorClass.js
   function createErrorClass(createImpl) {
     var _super = function(instance) {
       Error.call(instance);
@@ -269,7 +269,7 @@
     return ctorFunc;
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/UnsubscriptionError.js
+  // node_modules/rxjs/dist/esm5/internal/util/UnsubscriptionError.js
   var UnsubscriptionError = createErrorClass(function(_super) {
     return function UnsubscriptionErrorImpl(errors) {
       _super(this);
@@ -281,7 +281,7 @@
     };
   });
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/arrRemove.js
+  // node_modules/rxjs/dist/esm5/internal/util/arrRemove.js
   function arrRemove(arr, item) {
     if (arr) {
       var index = arr.indexOf(item);
@@ -289,7 +289,7 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/Subscription.js
+  // node_modules/rxjs/dist/esm5/internal/Subscription.js
   var Subscription = function() {
     function Subscription2(initialTeardown) {
       this.initialTeardown = initialTeardown;
@@ -426,7 +426,7 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/config.js
+  // node_modules/rxjs/dist/esm5/internal/config.js
   var config = {
     onUnhandledError: null,
     onStoppedNotification: null,
@@ -435,7 +435,7 @@
     useDeprecatedNextContext: false
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js
   var timeoutProvider = {
     setTimeout: function(handler, timeout) {
       var args = [];
@@ -455,7 +455,7 @@
     delegate: void 0
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js
+  // node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js
   function reportUnhandledError(err) {
     timeoutProvider.setTimeout(function() {
       var onUnhandledError = config.onUnhandledError;
@@ -467,11 +467,11 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/noop.js
+  // node_modules/rxjs/dist/esm5/internal/util/noop.js
   function noop() {
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/NotificationFactories.js
+  // node_modules/rxjs/dist/esm5/internal/NotificationFactories.js
   var COMPLETE_NOTIFICATION = function() {
     return createNotification("C", void 0, void 0);
   }();
@@ -489,7 +489,7 @@
     };
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/errorContext.js
+  // node_modules/rxjs/dist/esm5/internal/util/errorContext.js
   var context = null;
   function errorContext(cb) {
     if (config.useDeprecatedSynchronousErrorHandling) {
@@ -516,7 +516,7 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/Subscriber.js
+  // node_modules/rxjs/dist/esm5/internal/Subscriber.js
   var Subscriber = function(_super) {
     __extends(Subscriber2, _super);
     function Subscriber2(destination) {
@@ -681,17 +681,17 @@
     complete: noop
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/symbol/observable.js
+  // node_modules/rxjs/dist/esm5/internal/symbol/observable.js
   var observable = function() {
     return typeof Symbol === "function" && Symbol.observable || "@@observable";
   }();
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/identity.js
+  // node_modules/rxjs/dist/esm5/internal/util/identity.js
   function identity(x) {
     return x;
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/pipe.js
+  // node_modules/rxjs/dist/esm5/internal/util/pipe.js
   function pipeFromArray(fns) {
     if (fns.length === 0) {
       return identity;
@@ -706,7 +706,7 @@
     };
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/Observable.js
+  // node_modules/rxjs/dist/esm5/internal/Observable.js
   var Observable = function() {
     function Observable2(subscribe) {
       if (subscribe) {
@@ -798,7 +798,7 @@
     return value && value instanceof Subscriber || isObserver(value) && isSubscription(value);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/lift.js
+  // node_modules/rxjs/dist/esm5/internal/util/lift.js
   function hasLift(source) {
     return isFunction(source === null || source === void 0 ? void 0 : source.lift);
   }
@@ -817,7 +817,7 @@
     };
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js
+  // node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js
   function createOperatorSubscriber(destination, onNext, onComplete, onError, onFinalize) {
     return new OperatorSubscriber(destination, onNext, onComplete, onError, onFinalize);
   }
@@ -865,7 +865,7 @@
     return OperatorSubscriber2;
   }(Subscriber);
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/ObjectUnsubscribedError.js
+  // node_modules/rxjs/dist/esm5/internal/util/ObjectUnsubscribedError.js
   var ObjectUnsubscribedError = createErrorClass(function(_super) {
     return function ObjectUnsubscribedErrorImpl() {
       _super(this);
@@ -874,7 +874,7 @@
     };
   });
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/Subject.js
+  // node_modules/rxjs/dist/esm5/internal/Subject.js
   var Subject = function(_super) {
     __extends(Subject2, _super);
     function Subject2() {
@@ -1031,7 +1031,7 @@
     return AnonymousSubject2;
   }(Subject);
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/dateTimestampProvider.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/dateTimestampProvider.js
   var dateTimestampProvider = {
     now: function() {
       return (dateTimestampProvider.delegate || Date).now();
@@ -1039,7 +1039,7 @@
     delegate: void 0
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/Action.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/Action.js
   var Action = function(_super) {
     __extends(Action2, _super);
     function Action2(scheduler, work) {
@@ -1054,7 +1054,7 @@
     return Action2;
   }(Subscription);
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/intervalProvider.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/intervalProvider.js
   var intervalProvider = {
     setInterval: function(handler, timeout) {
       var args = [];
@@ -1074,7 +1074,7 @@
     delegate: void 0
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/AsyncAction.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/AsyncAction.js
   var AsyncAction = function(_super) {
     __extends(AsyncAction2, _super);
     function AsyncAction2(scheduler, work) {
@@ -1164,7 +1164,7 @@
     return AsyncAction2;
   }(Action);
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/Scheduler.js
+  // node_modules/rxjs/dist/esm5/internal/Scheduler.js
   var Scheduler = function() {
     function Scheduler2(schedulerActionCtor, now) {
       if (now === void 0) {
@@ -1183,7 +1183,7 @@
     return Scheduler2;
   }();
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/AsyncScheduler.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/AsyncScheduler.js
   var AsyncScheduler = function(_super) {
     __extends(AsyncScheduler2, _super);
     function AsyncScheduler2(SchedulerAction, now) {
@@ -1219,21 +1219,21 @@
     return AsyncScheduler2;
   }(Scheduler);
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduler/async.js
+  // node_modules/rxjs/dist/esm5/internal/scheduler/async.js
   var asyncScheduler = new AsyncScheduler(AsyncAction);
   var async = asyncScheduler;
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/empty.js
+  // node_modules/rxjs/dist/esm5/internal/observable/empty.js
   var EMPTY = new Observable(function(subscriber) {
     return subscriber.complete();
   });
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isScheduler.js
+  // node_modules/rxjs/dist/esm5/internal/util/isScheduler.js
   function isScheduler(value) {
     return value && isFunction(value.schedule);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/args.js
+  // node_modules/rxjs/dist/esm5/internal/util/args.js
   function last(arr) {
     return arr[arr.length - 1];
   }
@@ -1247,32 +1247,32 @@
     return typeof last(args) === "number" ? args.pop() : defaultValue;
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
+  // node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
   var isArrayLike = function(x) {
     return x && typeof x.length === "number" && typeof x !== "function";
   };
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isPromise.js
+  // node_modules/rxjs/dist/esm5/internal/util/isPromise.js
   function isPromise(value) {
     return isFunction(value === null || value === void 0 ? void 0 : value.then);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js
+  // node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js
   function isInteropObservable(input) {
     return isFunction(input[observable]);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js
+  // node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js
   function isAsyncIterable(obj) {
     return Symbol.asyncIterator && isFunction(obj === null || obj === void 0 ? void 0 : obj[Symbol.asyncIterator]);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js
+  // node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js
   function createInvalidObservableTypeError(input) {
     return new TypeError("You provided " + (input !== null && typeof input === "object" ? "an invalid object" : "'" + input + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/symbol/iterator.js
+  // node_modules/rxjs/dist/esm5/internal/symbol/iterator.js
   function getSymbolIterator() {
     if (typeof Symbol !== "function" || !Symbol.iterator) {
       return "@@iterator";
@@ -1281,12 +1281,12 @@
   }
   var iterator = getSymbolIterator();
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isIterable.js
+  // node_modules/rxjs/dist/esm5/internal/util/isIterable.js
   function isIterable(input) {
     return isFunction(input === null || input === void 0 ? void 0 : input[iterator]);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js
+  // node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js
   function readableStreamLikeToAsyncGenerator(readableStream) {
     return __asyncGenerator(this, arguments, function readableStreamLikeToAsyncGenerator_1() {
       var reader, _a, value, done;
@@ -1331,7 +1331,7 @@
     return isFunction(obj === null || obj === void 0 ? void 0 : obj.getReader);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js
+  // node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js
   function innerFrom(input) {
     if (input instanceof Observable) {
       return input;
@@ -1476,7 +1476,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/executeSchedule.js
+  // node_modules/rxjs/dist/esm5/internal/util/executeSchedule.js
   function executeSchedule(parentSubscription, scheduler, work, delay, repeat) {
     if (delay === void 0) {
       delay = 0;
@@ -1498,7 +1498,7 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/observeOn.js
+  // node_modules/rxjs/dist/esm5/internal/operators/observeOn.js
   function observeOn(scheduler, delay) {
     if (delay === void 0) {
       delay = 0;
@@ -1520,7 +1520,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/subscribeOn.js
+  // node_modules/rxjs/dist/esm5/internal/operators/subscribeOn.js
   function subscribeOn(scheduler, delay) {
     if (delay === void 0) {
       delay = 0;
@@ -1532,17 +1532,17 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduleObservable.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduleObservable.js
   function scheduleObservable(input, scheduler) {
     return innerFrom(input).pipe(subscribeOn(scheduler), observeOn(scheduler));
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/schedulePromise.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/schedulePromise.js
   function schedulePromise(input, scheduler) {
     return innerFrom(input).pipe(subscribeOn(scheduler), observeOn(scheduler));
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduleArray.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduleArray.js
   function scheduleArray(input, scheduler) {
     return new Observable(function(subscriber) {
       var i = 0;
@@ -1559,7 +1559,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduleIterable.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduleIterable.js
   function scheduleIterable(input, scheduler) {
     return new Observable(function(subscriber) {
       var iterator2;
@@ -1588,7 +1588,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduleAsyncIterable.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduleAsyncIterable.js
   function scheduleAsyncIterable(input, scheduler) {
     if (!input) {
       throw new Error("Iterable cannot be null");
@@ -1609,12 +1609,12 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduleReadableStreamLike.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduleReadableStreamLike.js
   function scheduleReadableStreamLike(input, scheduler) {
     return scheduleAsyncIterable(readableStreamLikeToAsyncGenerator(input), scheduler);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/scheduled/scheduled.js
+  // node_modules/rxjs/dist/esm5/internal/scheduled/scheduled.js
   function scheduled(input, scheduler) {
     if (input != null) {
       if (isInteropObservable(input)) {
@@ -1639,12 +1639,12 @@
     throw createInvalidObservableTypeError(input);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/from.js
+  // node_modules/rxjs/dist/esm5/internal/observable/from.js
   function from(input, scheduler) {
     return scheduler ? scheduled(input, scheduler) : innerFrom(input);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/EmptyError.js
+  // node_modules/rxjs/dist/esm5/internal/util/EmptyError.js
   var EmptyError = createErrorClass(function(_super) {
     return function EmptyErrorImpl() {
       _super(this);
@@ -1653,12 +1653,12 @@
     };
   });
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/isDate.js
+  // node_modules/rxjs/dist/esm5/internal/util/isDate.js
   function isValidDate(value) {
     return value instanceof Date && !isNaN(value);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/map.js
+  // node_modules/rxjs/dist/esm5/internal/operators/map.js
   function map(project, thisArg) {
     return operate(function(source, subscriber) {
       var index = 0;
@@ -1668,7 +1668,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/mapOneOrManyArgs.js
+  // node_modules/rxjs/dist/esm5/internal/util/mapOneOrManyArgs.js
   var isArray = Array.isArray;
   function callOrApply(fn, args) {
     return isArray(args) ? fn.apply(void 0, __spreadArray([], __read(args))) : fn(args);
@@ -1679,7 +1679,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/argsArgArrayOrObject.js
+  // node_modules/rxjs/dist/esm5/internal/util/argsArgArrayOrObject.js
   var isArray2 = Array.isArray;
   var getPrototypeOf = Object.getPrototypeOf;
   var objectProto = Object.prototype;
@@ -1706,14 +1706,14 @@
     return obj && typeof obj === "object" && getPrototypeOf(obj) === objectProto;
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/util/createObject.js
+  // node_modules/rxjs/dist/esm5/internal/util/createObject.js
   function createObject(keys, values) {
     return keys.reduce(function(result, key, i) {
       return result[key] = values[i], result;
     }, {});
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/combineLatest.js
+  // node_modules/rxjs/dist/esm5/internal/observable/combineLatest.js
   function combineLatest() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -1774,7 +1774,7 @@
     }
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/mergeInternals.js
+  // node_modules/rxjs/dist/esm5/internal/operators/mergeInternals.js
   function mergeInternals(source, subscriber, project, concurrent, onBeforeNext, expand, innerSubScheduler, additionalFinalizer) {
     var buffer = [];
     var active = 0;
@@ -1834,7 +1834,7 @@
     };
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
+  // node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
   function mergeMap(project, resultSelector, concurrent) {
     if (concurrent === void 0) {
       concurrent = Infinity;
@@ -1853,7 +1853,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/mergeAll.js
+  // node_modules/rxjs/dist/esm5/internal/operators/mergeAll.js
   function mergeAll(concurrent) {
     if (concurrent === void 0) {
       concurrent = Infinity;
@@ -1861,7 +1861,7 @@
     return mergeMap(identity, concurrent);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/fromEvent.js
+  // node_modules/rxjs/dist/esm5/internal/observable/fromEvent.js
   var nodeEventEmitterMethods = ["addListener", "removeListener"];
   var eventTargetMethods = ["addEventListener", "removeEventListener"];
   var jqueryMethods = ["on", "off"];
@@ -1919,7 +1919,7 @@
     return isFunction(target.addEventListener) && isFunction(target.removeEventListener);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/timer.js
+  // node_modules/rxjs/dist/esm5/internal/observable/timer.js
   function timer(dueTime, intervalOrScheduler, scheduler) {
     if (dueTime === void 0) {
       dueTime = 0;
@@ -1954,7 +1954,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/interval.js
+  // node_modules/rxjs/dist/esm5/internal/observable/interval.js
   function interval(period, scheduler) {
     if (period === void 0) {
       period = 0;
@@ -1968,7 +1968,7 @@
     return timer(period, period, scheduler);
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/observable/merge.js
+  // node_modules/rxjs/dist/esm5/internal/observable/merge.js
   function merge() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -1980,7 +1980,7 @@
     return !sources.length ? EMPTY : sources.length === 1 ? innerFrom(sources[0]) : mergeAll(concurrent)(from(sources, scheduler));
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/filter.js
+  // node_modules/rxjs/dist/esm5/internal/operators/filter.js
   function filter(predicate, thisArg) {
     return operate(function(source, subscriber) {
       var index = 0;
@@ -1990,7 +1990,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/defaultIfEmpty.js
+  // node_modules/rxjs/dist/esm5/internal/operators/defaultIfEmpty.js
   function defaultIfEmpty(defaultValue) {
     return operate(function(source, subscriber) {
       var hasValue = false;
@@ -2006,7 +2006,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/take.js
+  // node_modules/rxjs/dist/esm5/internal/operators/take.js
   function take(count) {
     return count <= 0 ? function() {
       return EMPTY;
@@ -2023,14 +2023,14 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/mapTo.js
+  // node_modules/rxjs/dist/esm5/internal/operators/mapTo.js
   function mapTo(value) {
     return map(function() {
       return value;
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js
+  // node_modules/rxjs/dist/esm5/internal/operators/throwIfEmpty.js
   function throwIfEmpty(errorFactory) {
     if (errorFactory === void 0) {
       errorFactory = defaultErrorFactory;
@@ -2049,7 +2049,7 @@
     return new EmptyError();
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/first.js
+  // node_modules/rxjs/dist/esm5/internal/operators/first.js
   function first(predicate, defaultValue) {
     var hasDefaultValue = arguments.length >= 2;
     return function(source) {
@@ -2061,7 +2061,7 @@
     };
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/tap.js
+  // node_modules/rxjs/dist/esm5/internal/operators/tap.js
   function tap(observerOrNext, error, complete) {
     var tapObserver = isFunction(observerOrNext) || error || complete ? { next: observerOrNext, error, complete } : observerOrNext;
     return tapObserver ? operate(function(source, subscriber) {
@@ -2092,7 +2092,7 @@
     }) : identity;
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/throttle.js
+  // node_modules/rxjs/dist/esm5/internal/operators/throttle.js
   var defaultThrottleConfig = {
     leading: true,
     trailing: false
@@ -2142,7 +2142,7 @@
     });
   }
 
-  // node_modules/cookies-ds/node_modules/rxjs/dist/esm5/internal/operators/throttleTime.js
+  // node_modules/rxjs/dist/esm5/internal/operators/throttleTime.js
   function throttleTime(duration, scheduler, config2) {
     if (scheduler === void 0) {
       scheduler = asyncScheduler;
@@ -3218,6 +3218,8 @@
         const loading = this.getAttribute("loading");
         if (loading !== null && isLoadingValid(loading)) {
           this.loading = loading;
+        } else if (loading === null) {
+          this.loading = "100";
         }
         this.render();
       }
