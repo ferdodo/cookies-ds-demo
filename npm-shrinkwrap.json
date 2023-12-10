@@ -1,10 +1,11 @@
 {
-  "name": "new-project",
+  "name": "cookies-ds-demo",
   "version": "1.0.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
+      "name": "cookies-ds-demo",
       "devDependencies": {
         "concurrently": "^7.6.0",
         "cookies-ds": "^1.2.0",
@@ -813,9 +814,9 @@
       }
     },
     "node_modules/vite": {
-      "version": "4.4.9",
-      "resolved": "https://registry.npmjs.org/vite/-/vite-4.4.9.tgz",
-      "integrity": "sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==",
+      "version": "4.5.1",
+      "resolved": "https://registry.npmjs.org/vite/-/vite-4.5.1.tgz",
+      "integrity": "sha512-AXXFaAJ8yebyqzoNB9fu2pHoo/nWX+xZlaRwoeYUxEqBO+Zj4msE5G+BhGBll9lYEKv9Hfks52PAF2X7qDYXQA==",
       "dev": true,
       "dependencies": {
         "esbuild": "^0.18.10",
@@ -1769,9 +1770,9 @@
       "dev": true
     },
     "vite": {
-      "version": "4.4.9",
-      "resolved": "https://registry.npmjs.org/vite/-/vite-4.4.9.tgz",
-      "integrity": "sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==",
+      "version": "4.5.1",
+      "resolved": "https://registry.npmjs.org/vite/-/vite-4.5.1.tgz",
+      "integrity": "sha512-AXXFaAJ8yebyqzoNB9fu2pHoo/nWX+xZlaRwoeYUxEqBO+Zj4msE5G+BhGBll9lYEKv9Hfks52PAF2X7qDYXQA==",
       "dev": true,
       "requires": {
         "esbuild": "^0.18.10",

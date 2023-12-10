@@ -1,4 +1,5 @@
 {
+  "name": "cookies-ds-demo",
   "scripts": {
     "build": "esbuild main.ts --platform=browser --bundle --sourcemap --tree-shaking=true --outfile=./public/main.js",
     "start": "concurrently npm:start:*",
