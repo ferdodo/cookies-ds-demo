@@ -8,11 +8,14 @@
       "name": "cookies-ds-demo",
       "devDependencies": {
         "concurrently": "^7.6.0",
-        "cookies-ds": "^1.2.0",
+        "cookies-ds": "^1.3.0",
         "esbuild": "^0.17.4",
         "typescript": "^4.9.4",
         "vite": "^4.1.1"
       }
+    },
+    "../cookies-ds": {
+      "extraneous": true
     },
     "../lib/design-system": {
       "extraneous": true
@@ -481,14 +484,13 @@
       }
     },
     "node_modules/cookies-ds": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/cookies-ds/-/cookies-ds-1.2.0.tgz",
-      "integrity": "sha512-NBxV5cnzm9dAYAs7SbL2BymTTOQQHyX3EzAvXTClYiaBlyEqGz8A1rqa9NadTiz/+JG2HgaC8/sC6yc0F6XQ0A==",
+      "version": "1.3.0",
+      "resolved": "https://registry.npmjs.org/cookies-ds/-/cookies-ds-1.3.0.tgz",
+      "integrity": "sha512-LrxXKtPdAiJhLnZarhk03RAD897zMWpQYCO0kv42aKovMttLCrxSUNHRPjRhTv4q2CsFW0aOlW5nR/W0tgKdXQ==",
       "dev": true,
       "hasShrinkwrap": true,
       "dependencies": {
-        "async-mutex": "^0.4.0",
-        "canvas-confetti": "^1.6.0"
+        "async-mutex": "^0.4.0"
       }
     },
     "node_modules/cookies-ds/fonts": {
@@ -501,16 +503,6 @@
       "dev": true,
       "dependencies": {
         "tslib": "^2.4.0"
-      }
-    },
-    "node_modules/cookies-ds/node_modules/canvas-confetti": {
-      "version": "1.6.0",
-      "resolved": "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.6.0.tgz",
-      "integrity": "sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==",
-      "dev": true,
-      "funding": {
-        "type": "donate",
-        "url": "https://www.paypal.me/kirilvatev"
       }
     },
     "node_modules/cookies-ds/node_modules/tslib": {
@@ -1546,13 +1538,12 @@
       }
     },
     "cookies-ds": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/cookies-ds/-/cookies-ds-1.2.0.tgz",
-      "integrity": "sha512-NBxV5cnzm9dAYAs7SbL2BymTTOQQHyX3EzAvXTClYiaBlyEqGz8A1rqa9NadTiz/+JG2HgaC8/sC6yc0F6XQ0A==",
+      "version": "1.3.0",
+      "resolved": "https://registry.npmjs.org/cookies-ds/-/cookies-ds-1.3.0.tgz",
+      "integrity": "sha512-LrxXKtPdAiJhLnZarhk03RAD897zMWpQYCO0kv42aKovMttLCrxSUNHRPjRhTv4q2CsFW0aOlW5nR/W0tgKdXQ==",
       "dev": true,
       "requires": {
-        "async-mutex": "^0.4.0",
-        "canvas-confetti": "^1.6.0"
+        "async-mutex": "^0.4.0"
       },
       "dependencies": {
         "async-mutex": {
@@ -1563,12 +1554,6 @@
           "requires": {
             "tslib": "^2.4.0"
           }
-        },
-        "canvas-confetti": {
-          "version": "1.6.0",
-          "resolved": "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.6.0.tgz",
-          "integrity": "sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==",
-          "dev": true
         },
         "tslib": {
           "version": "2.4.1",
