@@ -3007,7 +3007,7 @@
   }
 
   // node_modules/cookies-ds/dist/components/panel/template.js
-  var template_default7 = '<style>\n	:host {\n		display: block;\n	}\n\n	#panel-container {\n		display: grid;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		transition: grid-template-columns .5s cubic-bezier(.12,1.03,.11,.99), grid-template-rows .5s cubic-bezier(.12,1.03,.11,.99);\n		height: 100%;\n	}\n\n	#panel {\n		border-radius: 0.3rem;\n		padding: 1.7rem;\n		grid-area: 2 / 2 / 3 / 3;\n		background-color: #ffffff00;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);\n		color: black;\n		overflow: auto;\n		position: relative;\n	}\n\n	#panel-title-container {\n		grid-area: 2 / 2 / 3 / 3;\n		z-index: 1;\n	}\n\n	#panel-content {\n		visibility: collapse;\n		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);\n		overflow: hidden;\n		z-index: 1;\n		position: relative;\n	}\n\n	#panel-loading-container {\n		grid-area: 2 / 2 / 3 / 3;\n		overflow: hidden;\n		backdrop-filter: blur(0.3rem);\n	}\n\n	#panel-title {\n		background: linear-gradient(0deg, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.44) 100%);\n		display: inline-block;\n		border-radius: 0.3rem;\n		padding-left: 1rem;\n		padding-right: 1rem;\n		opacity: 0;\n		transition-duration: 0.8s;\n		transition-timing-function: cubic-bezier(.17,.84,.44,1);\n		transition-delay: 0.4s;\n		transition-property: opacity;\n	}\n\n	#panel-loading {\n		border-radius: 0.3rem;\n		width: 75%;\n		height: 100%;\n		background-color: #ffffff55;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n\n		transition-duration: 1s;\n		transition-timing-function: cubic-bezier(.17,.84,.44,1);\n		transition-delay: 0s;\n		transition-property: width, background-color;\n\n		color: black;\n		overflow: auto;\n\n		position: relative;\n	}\n\n	* {\n		scrollbar-width: auto;\n		scrollbar-color: #ffffff90 #ffffff00;\n	}\n\n	*::-webkit-scrollbar {\n		width: 8px;\n	}\n\n	*::-webkit-scrollbar-track {\n		background: #ffffff00;\n	}\n\n	*::-webkit-scrollbar-thumb {\n		background-color: #ffffff90;\n		border-radius: 10px;\n		border: 3px solid #ffffff00;\n	}\n</style>\n\n<div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">\n	<div id="panel-loading-container">\n		<div id="panel-loading"></div>\n	</div>\n\n	<div id="panel">\n		<div id="panel-content" style="opacity: 0;">\n			<slot></slot>\n		</div>\n	</div>\n\n	<div id="panel-title-container">\n		<div id="panel-title">\n			<cookies-p style="line-height: 0;">\n				<b id="panel-title-content"> </b>\n			</cookies-p>\n		</div>\n	</div>\n</div>\n';
+  var template_default7 = '<style>\n	:host {\n		display: block;\n	}\n\n	#panel-container {\n		display: grid;\n		grid-column-gap: 0px;\n		grid-row-gap: 0px;\n		transition: grid-template-columns .5s cubic-bezier(.12,1.03,.11,.99), grid-template-rows .5s cubic-bezier(.12,1.03,.11,.99);\n		height: 100%;\n	}\n\n	#panel {\n		border-radius: 0.3rem;\n		padding: 1.7rem;\n		grid-area: 2 / 2 / 3 / 3;\n		background-color: #ffffff00;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);\n		color: black;\n		overflow: auto;\n		position: relative;\n	}\n\n	#panel-title-container {\n		grid-area: 2 / 2 / 3 / 3;\n		z-index: 0;\n	}\n\n	#panel-content {\n		visibility: collapse;\n		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);\n		overflow: hidden;\n		z-index: 1;\n		position: relative;\n	}\n\n	#panel-loading-container {\n		grid-area: 2 / 2 / 3 / 3;\n		overflow: hidden;\n		backdrop-filter: blur(0.3rem);\n	}\n\n	#panel-title {\n		background: linear-gradient(0deg, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.44) 100%);\n		display: inline-block;\n		border-radius: 0.3rem;\n		padding-left: 1rem;\n		padding-right: 1rem;\n		opacity: 0;\n		transition-duration: 0.2s;\n		transition-timing-function: cubic-bezier(.12,1.03,.11,.99);\n		transition-delay: 0.4s;\n		transition-property: opacity;\n	}\n\n	#panel-loading {\n		border-radius: 0.3rem;\n		width: 75%;\n		height: 100%;\n		background-color: #ffffff55;\n		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);\n\n		transition-duration: 1s;\n		transition-timing-function: cubic-bezier(.17,.84,.44,1);\n		transition-delay: 0s;\n		transition-property: width, background-color;\n\n		color: black;\n		overflow: auto;\n\n		position: relative;\n	}\n\n	* {\n		scrollbar-width: auto;\n		scrollbar-color: #ffffff90 #ffffff00;\n	}\n\n	*::-webkit-scrollbar {\n		width: 8px;\n	}\n\n	*::-webkit-scrollbar-track {\n		background: #ffffff00;\n	}\n\n	*::-webkit-scrollbar-thumb {\n		background-color: #ffffff90;\n		border-radius: 10px;\n		border: 3px solid #ffffff00;\n	}\n</style>\n\n<div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">\n	<div id="panel-loading-container">\n		<div id="panel-loading"></div>\n	</div>\n\n	<div id="panel">\n		<div id="panel-content" style="opacity: 0;">\n			<slot></slot>\n		</div>\n	</div>\n\n	<div id="panel-title-container">\n		<div id="panel-title">\n			<cookies-p style="line-height: 0;">\n				<b id="panel-title-content"> </b>\n			</cookies-p>\n		</div>\n	</div>\n</div>\n';
 
   // node_modules/cookies-ds/dist/utils/app-ready.js
   var __awaiter5 = function(thisArg, _arguments, P2, generator) {
@@ -3105,6 +3105,8 @@
       this.contentLoaded = false;
       this.connected = false;
       this.loading = "100";
+      this.scrolled = false;
+      this.scrolledSubscription = null;
     }
     static get observedAttributes() {
       return ["loading", "panel-title"];
@@ -3126,6 +3128,15 @@
           panelContainer.style.gridTemplateRows = "1rem 1fr 1rem";
           const panel = getElement(shadowRoot, "#panel");
           panel.style.backgroundColor = "#ffffff40";
+          this.scrolledSubscription = fromEvent(panel, "scroll").pipe(
+            map((e) => e.target.scrollTop),
+            // startWith(0),
+            map((scrollTop) => scrollTop !== 0)
+            // distinctUntilChanged()
+          ).subscribe((value) => {
+            this.scrolled = value;
+            this.render();
+          });
           this.render();
         }, 10);
         setTimeout(() => {
@@ -3154,7 +3165,7 @@
       }
       panelLoading.style.width = `${this.loading}%`;
       const panelTitle = getElement(shadowRoot, "#panel-title");
-      if (this.loading === "100" && this.getAttribute("panel-title")) {
+      if (this.loading === "100" && this.getAttribute("panel-title") && !this.scrolled) {
         setTimeout(() => {
           panelTitle.style.opacity = "1";
           panelTitleContent.innerHTML = this.getAttribute("panel-title") || "";
@@ -3175,6 +3186,10 @@
         }
         this.render();
       }
+    }
+    disconnectedCallback() {
+      var _a;
+      (_a = this.scrolledSubscription) === null || _a === void 0 ? void 0 : _a.unsubscribe();
     }
   };
   function isLoadingValid(loading) {
